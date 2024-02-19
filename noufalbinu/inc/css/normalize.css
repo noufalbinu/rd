@@ -1,0 +1,10 @@
+/*NORMALIZE CSS*/
+* {
+    box-sizing: border-box;
+    list-style-type: disc;
+    text-decoration: none;
+}
+html, body {
+    margin: 0px;
+}
+/*NORMALIZE CSS END*/

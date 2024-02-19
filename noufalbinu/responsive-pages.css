@@ -1,0 +1,36 @@
+@media only screen and (min-width:700px) {
+    #menu {
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: relative;
+        font-size: 15px;
+        text-align: right;
+        right: 0px;
+        top: 0px;
+        opacity: unset;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    #nav-icon {
+        display: none;
+    }
+    div#mass-head ul {
+        border: none;
+        width: unset;
+        float: right;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    body {
+        width: 100% !important;
+    }
+    .bnr {
+        width: 100%;
+    }
+}

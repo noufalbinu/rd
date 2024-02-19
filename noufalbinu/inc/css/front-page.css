@@ -1,0 +1,151 @@
+svg.love {
+    filter: drop-shadow(2px 4px 6px #404040);
+}
+
+ @keyframes animate-svg-fill-1 {
+    0% {
+      fill: transparent;
+    }
+  
+    100% {
+      fill: #70d4d5;
+      filter: drop-shadow(1px 3px 3px #000000);
+    }
+  }
+  
+  .lovepath {
+    animation: animate-svg-fill-1 0.7s linear 0.3s both;
+  }
+  
+
+  
+.tagline h2 {
+    margin: 0 !important;
+    color: #ffffff;
+    font-size: 39px;
+    text-shadow: 1px 1px #000;
+    PADDING: 30PX 0;
+    font-family: 'Ubuntu', sans-serif;
+    height: 150px;
+}
+.tagline {
+    width: 100%;  
+    float: left;
+    text-align: center;
+}
+.tagline p {
+    color: #cbcbcb;
+    padding: 0 0 -0px 0;
+    line-height: 33px;
+    font-size: 22px;
+    font-family: 'Bad Script', cursive;
+}
+.bnr {
+    width: 700px;
+    margin: 0 auto;
+    display: block;
+}
+.icon-badge span {
+    border: 1px solid #fbd4c6;
+    width: 20%;
+    float: left;
+    background: #ffedca;
+    margin-top: 30px;
+    padding: 18px 10px 5px;
+    text-align: center;
+    border-right: none;
+}
+.icon-badge p {
+    float: none !important;
+}
+.icon-badge i {
+    color: #f15a24;
+    font-size: 40px;
+}
+
+
+.anim-button {
+    background: #e4df5b;
+    color: #0a0a0a;
+    padding: 10px 30px;
+    margin-top: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 4px 4px 6px -2px #3e3e3e;
+}
+
+div#services {
+    overflow: auto;
+    width: 100%;
+    padding: 86px 0 30px;
+    text-align: center;
+}
+div#services h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+.web {
+    width: 25%;
+    float: left;
+    padding: 10px 30px 10px 0;
+    text-align: center;
+}
+
+.excerpt-image {
+    display: block;
+}
+.web h3 {
+    padding: 8px;
+    margin: 0px;
+}
+.web a {
+    font-size: 17px;
+    line-height: 26px;
+    color: #fff;
+}
+.excerpt-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+div#freelancer-online {
+}
+.direct-work {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.direct-work h2 {
+    margin: 0px;
+    color: #fff;
+    padding: 37px 0;
+}
+.direct-work ul li {
+    color: #fff;
+    line-height: 40px;
+    margin-left: 29px;
+}
+p.fiver {
+    line-height: 31px;
+    color: #4d90fe;
+    padding: 48px 0 50px;
+    font-size: 20px;
+}
+p.fiver a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.second {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    height: 225px;
+    color: #b3b3b3;
+}
+.second:hover {
+    background-size: 120px;
+    
+}

@@ -1,0 +1,35 @@
+div#main {
+    text-align: center;
+}
+.portfolio-thumbnail-container {
+    float: left;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+}
+.portfolio-thumbnail {
+    float: left;
+    display: inline;
+    position: relative;
+    text-align: center;
+}
+.portfolio-thumbnail img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #bbb;
+}
+.portfolio-archive-title {
+    position: absolute;
+    bottom: 20%;
+    background: #0000008c;
+    color: #fff;
+    width: 70%;
+    padding: 8px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border: 1px solid #ffffff69;
+}
+.main-post-div {
+    padding: 0 15%;
+    text-align: center;
+}

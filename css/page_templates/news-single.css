@@ -1,0 +1,214 @@
+.banner {
+    background: url(../../img/blog-bg.png);
+    background-position: top center;
+    color: #fff;
+    position: relative;
+    height: 700px;
+}
+.banner:after {
+    content: "";
+    position: absolute;
+    opacity: 0.8;
+    background: linear-gradient(180deg, rgba(16, 14, 93, 0.00) 0%, rgba(10, 9, 47, 0.80) 100%);
+    mix-blend-mode: multiply;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.banner:before{
+    content: "";
+    position: absolute;
+    opacity: 0.8;
+    background: linear-gradient(180deg, rgba(14, 27, 49, 0.54) 0%, rgba(14, 27, 49, 0.14) 62.5%, rgba(21, 32, 54, 0.00) 100%);
+    mix-blend-mode: multiply;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+
+/****about end*****/
+.container {
+    padding: 70px 10% 100px;
+}
+.bg-ourstory-about {
+    background: #F1F1F1;
+}
+.column {
+	margin-bottom:20px;
+}
+.row {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100%;
+}
+.post-thumbnail {
+    width: 50%;
+    overflow: hidden;
+}
+.post-thumbnail img {
+    width: 100%;
+ height:auto;
+    overflow: hidden;
+}
+.news {
+    width: 50%;
+    padding: 50px 8rem;
+    background: #F1F1F1;
+    position: relative;
+}
+.entry.clear {
+    margin-top: 15px;
+}
+h2.post-title {
+    margin: 0;
+}
+.news h2 a {
+    color: #2F3133;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Glacial Indifference;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 49.5px;
+	text-decoration: none
+}
+.date-tag-container {
+    display: flex;
+}
+.tagss a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.datee {
+ color: #4E3838;
+ font-feature-settings: 'clig' off, 'liga' off;
+ font-family: Arial;
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 30px; /* 166.667% */
+ margin: 0;
+}
+.news p {
+    color: #4E3838;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    margin: 0;
+}
+.other-news {
+    display: grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+}
+.recent-news-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    position: relative;
+}
+.recent-news-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+.title-text-link {
+    padding: 28px;
+    border: 1px solid #bbbbbb70;
+}
+a.recent-link {
+    color: #060618;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Glacial Indifference;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    text-decoration: none;
+}
+.image-text-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position:relative;
+}
+.image-text-container img {
+    width:50%;
+}
+.read-more-news {
+    text-decoration: none;
+    padding: 39px 0;
+    font-size: 18px;
+    position: relative;
+    border-radius: 0;
+    border: none;
+    color: #0077C8;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Glacial Indifference;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+     /* 100% */
+    display: flex;
+    position: relative;
+    width: 185px;
+}
+.read-more-news:after {
+    content: "";
+    background: url(../../img/arrow-right-blue.png) no-repeat;
+    padding: 18px 46px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 23px;
+    right: 0;
+}
+.column.company-bg {
+    background:url(../../img/our-network-bg.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+.company-bg-spacer {
+    display: flex;
+    height: 600px;
+    width:  100%;
+}
+.view-more-team {
+    background: #0077C8;;
+}
+/****about end*****/
+
+
+
+
+/****contact form*****/
+
+.network-contact {
+  opacity: 0.8;
+  mix-blend-mode: darken;
+  background: url(../../img/teams-bottom-bg.png) no-repeat;
+  background-position: center;
+  background-size: 137%;
+  display: block;
+  position: relative;
+}
+.network-contact:after {
+ content:"";
+ position:absolute;
+opacity: 0.8;
+background: linear-gradient(270deg, rgba(16, 14, 93, 0.80) -8.72%, rgba(16, 14, 93, 0.00) 104.61%);
+mix-blend-mode: lighten;
+ height: 100%;
+ width: 100%;
+ left: 0;
+ top: 0;
+ z-index: -1;
+}
+
+.network-contact .wrap {
+    padding: 6% 11%;
+}

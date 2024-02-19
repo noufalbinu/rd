@@ -1,0 +1,288 @@
+.banner {
+    background:url(../../img/our-story-bg.jpg);
+    background-position: top center;
+    background-size: 100%;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+.banner:after {
+    content: "";
+    position: absolute;
+    opacity: 0.8;
+    background: linear-gradient(180deg, rgba(16, 14, 93, 0.00) 0%, rgba(10, 9, 47, 0.80) 100%);
+    mix-blend-mode: multiply;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.center-content {
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    z-index: 5;
+}
+
+/****about end*****/
+.bg-ourstory-about {
+    background: #F1F1F1;
+}
+.bg-ourstory-about h1 {
+    color: var(--title, #060618);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Glacial Indifference;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; /* 125% */
+    margin-top: 63px;
+}
+.custom-row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.bg-ourstory-about p {
+  color: var(--text, #4E4E4E);
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Arial;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 166.667% */
+text-transform: capitalize;
+}
+.column {
+    width: 100%;
+    justify-content: center;
+}
+.column.company-bg {
+    background:url(../../img/alutec-our-story.jpeg) no-repeat;
+    background-size: 140% auto;
+    background-position: center;
+}
+.company-bg-spacer {
+    display: flex;
+    height: 600px;
+    width:  100%;
+}
+.view-more-ourstory {
+    background: #0077C8;
+    padding: 18px 50px;
+    margin-bottom: 55px;
+}
+/****about end*****/
+
+
+/****custom table end*****/
+.custom-table {
+    display: flex;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td {
+    border-color: #8b8b8b;
+    border-style:solid;
+    border-width:0 0 1px 0;
+    font-size: 19px;
+    padding: 10px 0;
+}
+.tg td:first-child {
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+}
+.tg td:last-child {
+    color: var(--text, #4E4E4E);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
+}
+/****custom table end*****/
+
+.lds-ripple {
+  
+}
+
+
+/****map*****/
+.map_container {
+    position:relative;
+    display: inline-block;
+    width: 100%;
+}
+.current_marker {
+    visibility: visible !important;
+}
+.marker {
+  visibility: hidden;
+  border: 1px solid #bbb !important;
+  padding: 10px 3px;
+  text-align: center;
+  min-width: 154px;
+  background: #fff;
+  z-index: 11111111111;
+  position: absolute;
+  bottom: 0px;
+  left: -49px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.marker:after, .marker:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.marker:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.marker:before {
+	border-top-color: #bbb;
+	border-width: 12px;
+	margin-left: -12px;
+}
+.marker img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding-right: 10px;
+}
+.marker b {
+color: #0077C8;
+text-align: center;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Arial;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 100% */
+}
+.map-marker {
+   position: absolute;
+   font-size: 20px;
+   text-decoration:none;
+ }
+
+
+ .marker p {
+ font-size: 15px;
+ }
+ #one {
+   top: 43%;
+   left: 58%;
+ }
+ #two {
+   top: 31%;
+   left: 47%;
+ }
+ #three {
+     top: 46%;
+     left: 66%;
+ }
+ #four {
+     top: 38%;
+     right: 29%;
+ }
+ #five {
+     top: 35%;
+     right: 55%;
+ }
+ #six {
+  top: 34%;
+  left: 18%;
+}
+#seven {
+  top: 8%;
+  left: 34%;
+}
+#eight {
+  top: 51%;
+  left: 75%;
+}
+#nine {
+  top: 43%;
+  left: 53%;
+}
+#ten {
+  top: 72%;
+  right: 19%;
+}
+    
+/****landmark animation*****/
+.lds-ripple div {
+  position: absolute;
+  border: 3px solid #0081FE;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.6, 1) infinite;
+  width: 2px;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .banner {
+      background: url(../../img/our-story-bg.jpg);
+      background-position: top center;
+      background-size: auto 100%;
+  }
+  .bg-ourstory-about {
+    flex-direction: column;
+  }
+  .custom-row {
+    flex-direction: column;
+  }
+  .map_container, .map {
+    display: none;
+  }
+}

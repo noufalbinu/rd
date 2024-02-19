@@ -1,0 +1,33 @@
+div#mass-head {
+    margin: 20px 0 20px;
+}
+
+#topbar {
+    color: #fff;
+    display: flex !important;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+div#mass-head a {
+    color: #fff;
+    font-weight: 300;
+}
+/*NAV*/
+div#mass-head ul {
+    list-style-type: none;
+    padding: 0px;
+    border: 1px solid #000;
+    border-width: 1px 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+div#mass-head ul li {
+    display: inline;
+}
+div#mass-head ul li a {
+    text-decoration: none;
+    padding: 21px 20px;
+}
+div#mass-head b {font-family: 'Dancing Script', cursive;font-size: 29px;width: 200px;}

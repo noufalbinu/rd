@@ -1,0 +1,13 @@
+.sidebar h2 {
+    color: #cd3929;
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: 600;
+    display: inline !important;
+    border-bottom: 1px solid;
+    position: relative;
+    left: -31px;
+    padding-left: 34px;
+    padding-bottom: 6px;
+} 
+               

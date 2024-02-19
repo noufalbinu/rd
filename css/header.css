@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+/** CLEAR FIX****/
+* {
+    box-sizing: border-box;
+}
+/** CLEAR FIX END ****/
+ html {
+	 font-size: 100%;
+	 font-family: "Nunito", Arial, sans-serif;
+	 font-weight: normal;
+	 line-height: 1.5;
+	 -webkit-font-smoothing: antialiased;
+	 margin-top: 0px !important;
+	 padding-top: 0px !important;
+}
+ a {
+	 color: #4c4c4c;
+	 opacity: 1;
+	 text-decoration: none;
+}
+a:hover {
+	 opacity: 0.85;
+	 text-decoration: underline;
+}
+ .content {
+	 text-align: center;
+	 margin-top: 2em;
+}
+.header-outer-nav {
+    background: #623284;
+    padding: 20px;
+    color: #fff;
+}
+p.notification-nav {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 200;
+    font-size: 17px;
+}
+p.notification-nav a {
+    color: #1cff83;
+    text-decoration: underline;
+}
+header {
+	background: #e8ffb400;
+	}
+.header-wrap {
+    height: 78px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    width: 153px;
+    padding-top: 10px;
+}
+form#search-form {position: relative;}
+/* Search bar */
+@media screen and (max-width: 780px) {
+	.nav-icon-contianer {
+    z-index: 11111199999991;
+    padding: 1px 4px;
+    height: 42px;
+    width: 42px;
+    border-radius: 58px;
+    top: 103px;
+    right: 39px;
+    display: block !important;
+    }
+	.nav-icon-contianer.open {
+    background: #b3b5b800;
+}
+.nav-icon.open {
+    right: 14px;
+}
+	
+	.nav-container {
+    background: #f2fafb;
+    flex-direction: column;
+    z-index: 1;
+    opacity: 0;
+    transition: 400ms ease;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    max-width: 300px;
+    min-width: 100%;
+    height: 100%;
+    transform: translateX(300px);
+    margin: 0;
+    }
+	.nav-container.active {
+		max-height: 100vh;
+		opacity: 1;
+		transform: translateX(0);
+		right: 0;
+		overflow: hidden;
+	}
+		li.nav-item {
+    width: 100%;
+}
+	.navbar-utils {
+    bottom: 0px;
+    width: 100%;
+    z-index: 5555555555555555;
+    position: absolute;
+    padding: 0 6%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    background: #dbf0f3;
+}
+  form#search-form {
+    display: flex;
+    width: 378px;
+    max-width: 100%;
+    padding: 35px 13px;
+  }
+  .search-field {
+    width: 100% !important;
+    display: inline-block;
+    border-radius: 5px 0 0 5px !important;
+    background: #fff;
+    height: 40px !important;
+  }
+   svg.search-icon {
+    top: 22px;
+  }
+	.search-input {
+    display: inline-block !important;
+    background: #3887d0;
+    border: 0px;
+    right: 0;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    height: 40px;
+  }
+	svg.search-icon-mob {
+    position: relative;
+    top: -6px;
+  }
+	span.close-open {
+    display: none;
+  }
+}
+
+
+svg.search-icon {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    visibility: visible;
+    fill: #ffffff;
+}
+#search-form .close-icon-small {
+    visibility: hidden;
+}
+.close-icon .close-icon-small {
+    visibility: visible !important;
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    height: 25px;
+    width: 25px;
+    z-index: 55555;
+    fill: #000;
+}
+.close-icon .search-icon {
+    visibility: hidden;
+}
+svg.search-icon path {
+    stroke: #74538c;
+}
+
+#search-form input::-webkit-input-placeholder {
+    color:transparent;
+}
+#search-form input::-moz-placeholder {
+    color:transparent;
+}
+#search-form input:-ms-input-placeholder {
+    color:transparent;
+}
+#search-form input::placeholder {
+    color:transparent;
+}
+.close-icon input:focus::-webkit-input-placeholder {
+    color: #ccc;
+}
+.close-icon input:focus:-moz-placeholder {
+    color: #ccc;
+}
+.close-icon input:focus::-moz-placeholder {
+    color: #ccc;
+}
+.close-icon input:focus:placeholder {
+    color:#ccc;
+}
+.close-icon input:hover::-webkit-input-placeholder {
+    color: #ccc;
+}
+.close-icon input:hover:-moz-placeholder {
+    color: #ccc;
+}
+.close-icon input:hover::-moz-placeholder {
+    color: #ccc;
+}
+.close-icon input:hover:placeholder {
+    color:#ccc;
+}
+#search-button-1 {
+    position: absolute;
+    float: right;
+    right: 0px;
+    display: block;
+    width: 52px;
+    height: 53px;
+    background-color: #eb9316;
+}
+/** Search Fields **/
+.close-icon .search-field {
+    width: 200px;
+    height: 40px;
+    padding: 10px 10px;
+    font-size: 22px;
+    /* CSS3 Box Sizing */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    /* CSS3 Rounded Corners */
+    /* CSS3 Transition (Expanding Effect) */
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-backface-visibility: visible;
+    background: #ffffff;
+    color: #000 !important;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: arial;
+}
+ .search-field {
+    float: right;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 10px 10px;
+    background-repeat: no-repeat;
+    background-position:right;
+    border-radius: 35px;
+    border: none;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-backface-visibility: unset;
+    background: #9fcb3a;
+}
+/** Search Field 1 Focus (Full Width) **/
+ .search-field .close-icon, .search-field .close-icon {
+    outline: none;
+    min-width: 200px;
+    max-width: 500px;
+    width: 80%;
+    color: #777;
+    /* CSS3 Outer Shadow */
+    -webkit-box-shadow: 0 0 0 2px #999;
+    -moz-box-shadow: 0 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+}
+/** Don't want the reset auto-button to show up over the button image **/
+ .search-field::-ms-clear {
+    width : 0;
+    height: 0;
+}
+/** Make text visible again on focus or hover **/
+.close-icon #search-text:focus, .close-icon #search-text {
+    color: #777;
+}
+.nav-container {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+@media screen and (max-width: 600px) {
+  svg.search-icon {
+    position: relative;
+  }
+  .search-field {
+    width: 100%;
+  }
+  .header-wrap {
+    height: 128px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text-content h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+
+}

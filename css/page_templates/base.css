@@ -1,0 +1,21 @@
+.banner .center-content h1 {
+  color: var(--white, #FFF);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Glacial Indifference;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 8px; /* 120% */
+}
+.banner .center-content p {
+  color: var(--white, #FFF);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Arial;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 125% */
+  text-transform: capitalize;
+}

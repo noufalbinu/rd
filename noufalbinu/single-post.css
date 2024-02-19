@@ -1,0 +1,21 @@
+pre.wp-block-preformatted {
+    background: #2d2b3c;
+    padding: 16px;
+    border-radius: 10px;
+    color: #fff;
+}
+.recent-updates {
+    background: #fff;
+    margin: 30 0px 0 0;
+    overflow: auto;
+    border-radius: 10px;
+    padding: 30px;
+}
+.author-bio {
+    background: #2e2c32;
+    padding: 15px;
+    color: #fff !important;
+    border-radius: 10px;
+    float: left;
+    width: 100%;
+}

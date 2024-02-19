@@ -1,0 +1,19 @@
+.tstm-container {
+    float: none;
+    list-style: none;
+    position: absolute;
+    z-index: 50;
+    padding: 0px 59px;
+}
+.stars {
+    color: #e4df5b;
+    font-size: 23px;
+}
+
+
+.second p {
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 600;
+}
+           

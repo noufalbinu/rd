@@ -1,0 +1,176 @@
+.blog-container {}
+.blog-container-wrap {margin: 0 auto;display: grid;grid-template-columns: auto auto;}
+.blog-post-content {
+    border: 1px solid #cecdcd8c;
+    border-radius: 5px;
+    padding: 30px;
+    background: #fff;
+    width: 700px;
+    margin-bottom: 30px;
+    margin-right: 18px;
+}
+.blog-post-sidebar-wrap {
+    width: 400px;
+    margin-left: 10px;
+}
+.post-title {
+    margin: 0;
+    padding: 0px 0px;
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-size: 26px;
+    border-radius: 8px 8px 0 0;
+    font-family: Arvo,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1.entrytitle a {
+    color: #ebebeb;
+}
+.entrybody h2 {
+    color: #ff7b6d;
+}
+pre.wp-block-code.prettyprinted {
+    background: #d3d3d3;
+    padding: 22px;
+    border-radius: 10px;
+}
+blockquote {
+    background-color: #9e2812;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzllMjgxMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZjBkMGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9e2812), to(#6f0d0d));
+    background-image: -webkit-linear-gradient(top, #9e2812 0%, #6f0d0d 100%);
+    background-image: -moz-linear-gradient(top, #9e2812 0%, #6f0d0d 100%);
+    background-image: -o-linear-gradient(top, #9e2812 0%, #6f0d0d 100%);
+    background-image: linear-gradient(to bottom, #9e2812 0%, #6f0d0d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#9e2812", endColorstr="#6f0d0d",GradientType=0 );
+    padding: 20px !important;
+    border-radius: 6px;
+    color: #fff;
+}
+blockquote:before {
+    border-color: rgba(0,0,0,0) #ad5c5c #6f0d0d rgba(0,0,0,0);
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    border-color: rgba(0,0,0,0) #222 #222 rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 5px;
+    width: 0;
+    height: 0;
+}
+pre.wp-block-preformatted {
+    background: #2d2b3c;
+    padding: 16px;
+    border-radius: 10px;
+    color: #fff;
+}
+.recent-updates {
+    background: #444;
+    margin: 30 0px 0 0;
+    overflow: auto;
+    border-radius: 0 0 8px 8px;
+    padding: 30px;
+}
+.author-bio {
+    color: #000 !important;
+    border-radius: 10px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+img.avatar {
+    border-radius: 32px;
+    display: inline;
+    float: left;
+    margin-right: 20px;
+    width: 44px;
+    height: auto;
+}
+/****Comments****/
+.comment-header {
+    display: grid;
+    grid-template-columns: 52px auto auto;
+    position: relative;
+    bottom: -13px;
+}
+.comment-img-thumbnail img {
+    margin: 0;
+}
+span.comment-by {
+    color: #979797;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+    padding: 10px;
+    align-items: center;
+}
+.comment_text {
+    color: #000;
+    background-color: #fff;
+    padding: 11px 20px 20px;
+    border-radius: 10px;
+    border: 1px solid #bbbbbb4f;
+}
+.comment-author-name {
+    color: #3a5e74;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+}
+ul.children {
+    margin-left: 21px;
+    margin-top:10px
+}
+.float-right-replay {
+    display:flex;
+    flex-direction: row-reverse;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+span.float-right-replay img {
+    background: #e2e6e8;
+    border-radius: 65%;
+    padding: 6px;
+    width: 33px;
+    position: absolute;
+    top: 0;
+}
+
+/******Comment-form & comments******/
+#comment {
+    margin-bottom: 0px;
+    height: 200px;
+    width: 100%;
+    padding: 30px;
+    font-family: verdana;
+    margin-top: 20px;
+    border-radius: 10px;
+    float: left;
+}
+#author, #email {
+    border: 1px solid rgb(165, 163, 163);
+    padding: 8px;
+    font-family: verdana;
+    margin: 0 20px 0 0px;
+    width: 100%;
+    border-radius: 5px;
+    height: 51px;
+}
+#submit {
+    padding: 16px 51px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #5b7177;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+ol.comment-list, ol.comment-list ul {
+    list-style-type: none;
+    padding: 0;
+}

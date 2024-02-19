@@ -1,0 +1,16 @@
+.about-profile img {
+    border-radius: 10px;
+}
+input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    background: #222;
+    padding: 12px 70px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.wpcf7-form-control {
+                                padding: 10px;
+                                border-radius: 3px;
+                                border: none;
+                            }

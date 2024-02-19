@@ -1,0 +1,230 @@
+/*
+Theme Name: Alutec
+Theme URI: 
+Description: ~~~~
+Version: 1.0
+Author: Noufal Binu
+Author URI: 
+Tags: ~~~
+*/
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-container-v {
+    background: #eee;
+}
+
+.swiper-container-h {
+    width: 96%;
+    margin: 0px auto;
+}
+
+.swiper-container-h .swiper-wrapper {
+    height: 80%;
+    margin-top: 3%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+.color-1 {
+    background-color: #f44336;
+}
+
+.color-2 {
+    background-color: #E91E63;
+}
+
+.color-3 {
+    background-color: #9C27B0;
+}
+
+.color-4 {
+    background-color: #673AB7;
+}
+
+.color-5 {
+    background-color: #3F51B5;
+}
+
+.color-6 {
+    background-color: #2196F3;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900");
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider .status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.slider .status .point {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -2px;
+    background-color: #ff0;
+    border-radius: 50%;
+    z-index: 15;
+    transition: left 500ms ease-in-out;
+}
+
+.slider .status .point[data-current='0'] {
+    left: 4px;
+}
+
+.slider .status .point[data-current='1'] {
+    left: 24px;
+}
+
+.slider .status .point[data-current='2'] {
+    left: 44px;
+}
+
+.slider .status .point[data-current='3'] {
+    left: 64px;
+}
+
+.slider .status .point[data-current='4'] {
+    left: 84px;
+}
+
+.slider .status .point[data-current='5'] {
+    left: 104px;
+}
+
+.slider .status .stat {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 20;
+    margin: 0px 5px;
+    border: 1px solid #fff;
+}
+
+.slider .status .stat.current {
+    background-color: #fff;
+}
+
+.slider .text {
+    position: absolute;
+    color: #000;
+    text-shadow: 0 0 5px #000 3;
+    z-index: 20;
+    transform-origin: right top;
+    display: grid;
+    grid-template-columns: 90vh;
+    grid-template-rows: 1fr;
+    font-size: 10vw;
+    text-transform: uppercase;
+    bottom: 0;
+}
+
+@media (min-width: 70em) {
+    .slider .text {
+        font-size: 5em;
+    }
+}
+
+.slider .text div {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    opacity: 0;
+}
+
+.slider .text div.current {
+    opacity: .7;
+}
+
+.slider img {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+    filter: sepia(1) hue-rotate(180deg);
+    display: block;
+}
+
+.slider .image {
+    width: 100%;
+    margin-right: -100%;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(0) scale(1.2);
+    z-index: 1;
+}
+
+.slider .image.current {
+    z-index: 10;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}

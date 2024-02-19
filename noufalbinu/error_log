@@ -1,0 +1,20 @@
+[18-Mar-2018 12:23:47 Etc/GMT] PHP Fatal error:  Call to undefined function get_header() in /home/digitko6/public_html/wejobsalert.com/wp-content/themes/Job-portal/archive.php on line 5
+[18-Mar-2018 12:23:48 Etc/GMT] PHP Fatal error:  Call to undefined function get_header() in /home/digitko6/public_html/wejobsalert.com/wp-content/themes/Job-portal/archive.php on line 5
+[20-Mar-2018 04:48:40 Etc/GMT] PHP Fatal error:  Call to undefined function wp_title() in /home/digitko6/public_html/wejobsalert.com/wp-content/themes/Job-portal/header.php on line 7
+[20-Mar-2018 04:48:41 Etc/GMT] PHP Fatal error:  Call to undefined function wp_title() in /home/digitko6/public_html/wejobsalert.com/wp-content/themes/Job-portal/header.php on line 7
+[14-Jul-2019 01:04:06 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php on line 1
+[18-Jul-2019 08:48:27 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php on line 1
+[22-Jul-2019 15:38:18 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php on line 1
+[02-Aug-2019 05:25:26 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/digitko6/public_html/vidyaguru.com/wp-content/themes/Job-portal/index.php on line 1

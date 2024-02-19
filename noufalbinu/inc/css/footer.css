@@ -1,0 +1,36 @@
+footer {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+div#footer-cap {
+    float: left;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    padding: 46px 50px 0;
+    color: #9f9f9f;
+    height: 171px;
+}
+div#footer-cap p {
+    font-size: 12px;
+}
+div#footer-cap a {color: #9f9f9f;}
+
+.socialmedia-footer svg {
+    width: 48px;
+    padding: 12px;
+    filter: drop-shadow(1px 3px 3px  #3a3a3a);
+}
+.socialmedia-footer svg:hover {
+    padding: 12px;
+    filter: drop-shadow(1px 3px 3px  #1e1e1e);
+}
+.socialmedia-footer svg path {
+    fill: #b9b9b9;
+}
+.socialmedia-footer svg path:hover {
+    fill: #c4d17f;
+}

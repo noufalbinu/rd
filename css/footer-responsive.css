@@ -1,0 +1,12 @@
+@media screen and (max-width: 680px) { 
+    .footer-middle-container {
+        padding: 0 5% !important;
+        }   
+    .footer-column-three  {
+        width: 100%;
+    }
+    .footer-column-three {
+        width: 50% !important;
+    }
+
+}

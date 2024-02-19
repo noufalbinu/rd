@@ -1,0 +1,30 @@
+/*Styles for screen 600px and Lower*/
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        float: right;
+        border-radius: 0;
+        margin-top: 15px;
+    .recent-updates {
+        background: #fff;
+        margin: 30 0px 0 0;
+        overflow: auto;
+        border-radius: 0 0 8px 8px;
+        padding: 30px;
+};
+    .recent-updates {
+        background: #fff;
+        margin: 30 0px 0 0;
+        overflow: auto;
+        border-radius: 0 0 8px 8px;
+        padding: 30px;
+};
+    .recent-updates {
+        background: #fff;
+        margin: 30 0px 0 0;
+        overflow: auto;
+        border-radius: 0 0 8px 8px;
+        padding: 30px;
+};
+    }
+}
