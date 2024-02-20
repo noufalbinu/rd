@@ -43,7 +43,7 @@ p.notification-nav a {
     text-decoration: underline;
 }
 header {
-	background: #e8ffb400;
+	background: #ffffff;
 	}
 .header-wrap {
     height: 78px;
@@ -54,7 +54,7 @@ header {
     justify-content: space-between;
 }
 .logo img {
-    width: 153px;
+    width: 260px;
     padding-top: 10px;
 }
 form#search-form {position: relative;}
@@ -155,7 +155,7 @@ svg.search-icon {
     width: 30px;
     height: 30px;
     visibility: visible;
-    fill: #ffffff;
+    fill: #f9f9f9;
 }
 #search-form .close-icon-small {
     visibility: hidden;
@@ -264,7 +264,7 @@ svg.search-icon path {
     -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
     -webkit-backface-visibility: unset;
-    background: #9fcb3a;
+    background: #c9c9c9;
 }
 /** Search Field 1 Focus (Full Width) **/
  .search-field .close-icon, .search-field .close-icon {
