@@ -101,14 +101,66 @@ class adroit_Walker extends Walker_Nav_Menu {
     }
 }
 
-add_action( 'init', 'codex_themes_init' );
-function codex_themes_init() {
+// Add term page
+function pippin_taxonomy_add_new_meta_field() {
+	// this will add the custom meta field to the add new term page
+	?>
+	<div class="form-field">
+		<label for="term_meta[custom_term_meta]"><?php _e( 'Example meta field', 'pippin' ); ?></label>
+		<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="">
+		<p class="description"><?php _e( 'Enter a value for this field','pippin' ); ?></p>
+	</div>
+<?php
+}
+add_action( 'resort_add_form_fields', 'pippin_taxonomy_add_new_meta_field', 10, 2 );
+
+// Edit term page
+function pippin_taxonomy_edit_meta_field($term) {
+ 
+	// put the term ID into a variable
+	$t_id = $term->term_id;
+ 
+	// retrieve the existing value(s) for this meta field. This returns an array
+	$term_meta = get_option( "taxonomy_$t_id" ); ?>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="term_meta[custom_term_meta]"><?php _e( 'Set a Fetured Image', 'pippin' ); ?></label></th>
+		<td>
+			<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="<?php echo esc_attr( $term_meta['custom_term_meta'] ) ? esc_attr( $term_meta['custom_term_meta'] ) : ''; ?>">
+			<p class="description"><?php _e( 'Enter a value for this field','pippin' ); ?></p>
+		</td>
+	</tr>
+<?php
+}
+add_action( 'resort_edit_form_fields', 'pippin_taxonomy_edit_meta_field', 10, 2 );
+
+// Save extra taxonomy fields callback function.
+function save_taxonomy_custom_meta( $term_id ) {
+	if ( isset( $_POST['term_meta'] ) ) {
+		$t_id = $term_id;
+		$term_meta = get_option( "taxonomy_$t_id" );
+		$cat_keys = array_keys( $_POST['term_meta'] );
+		foreach ( $cat_keys as $key ) {
+			if ( isset ( $_POST['term_meta'][$key] ) ) {
+				$term_meta[$key] = $_POST['term_meta'][$key];
+			}
+		}
+		// Save the option array.
+		update_option( "taxonomy_$t_id", $term_meta );
+	}
+}  
+add_action( 'edited_genres', 'save_taxonomy_custom_meta', 10, 2 );  
+add_action( 'create_genres', 'save_taxonomy_custom_meta', 10, 2 );
+
+
+
+add_action( 'init', 'codex_resort_init' );
+function codex_resort_init() {
 	$labels = array(
-		'name'               => _x( 'Themes', 'post type general name', 'your-plugin-textdomain' ),
-		'singular_name'      => _x( 'themes', 'post type singular name', 'your-plugin-textdomain' ),
-		'menu_name'          => _x( 'Themes', 'admin menu', 'your-plugin-textdomain' ),
+		'name'               => _x( 'resort', 'post type general name', 'your-plugin-textdomain' ),
+		'singular_name'      => _x( 'resort', 'post type singular name', 'your-plugin-textdomain' ),
+		'menu_name'          => _x( 'resort', 'admin menu', 'your-plugin-textdomain' ),
 		
-		'name_admin_bar'     => _x( 'themes', 'add new on admin bar', 'your-plugin-textdomain' ),
+		'name_admin_bar'     => _x( 'resort', 'add new on admin bar', 'your-plugin-textdomain' ),
 		'add_new'            => _x( 'Add New', 'Theme', 'your-plugin-textdomain' ),
 		'add_new_item'       => __( 'Add New Theme', 'your-plugin-textdomain' ),
 		'new_item'           => __( 'New Theme', 'your-plugin-textdomain' ),
@@ -128,25 +180,27 @@ function codex_themes_init() {
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		
-        'taxonomies' => ['category'],
+        'taxonomies' => ['resort'],
 
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'themes' ),
+		'rewrite'            => array( 'slug' => 'resort' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 	);
-	register_post_type( 'themes', $args );
+	register_post_type( 'resort', $args );
 }
-register_taxonomy( 'category', array('themes'), array(
-  'hierarchical' => true, 
-  'label' => 'Category', 
-  'singular_label' => 'Category', 
-  'rewrite' => array( 'slug' => 'category', 'with_front'=> false )
-  )
+register_taxonomy( 'resort', array('resort'), 
+
+    array(
+     'hierarchical' => true, 
+     'label' => 'Resort', 
+     'singular_label' => 'Resort Category', 
+     'rewrite' => array( 'slug' => 'resort-category', 'with_front'=> false )
+     )
 );
 
 
@@ -156,7 +210,7 @@ register_taxonomy( 'category', array('themes'), array(
  * Register meta boxes.
  */
 function hcf_register_meta_boxes() {
-    add_meta_box( 'hcf-1', __( 'Hello Custom Field', 'hcf' ), 'hcf_display_callback', 'themes' );
+    add_meta_box( 'hcf-1', __( 'Hello Custom Field', 'hcf' ), 'hcf_display_callback', 'resort' );
 }
 add_action( 'add_meta_boxes', 'hcf_register_meta_boxes' );
 

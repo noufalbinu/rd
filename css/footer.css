@@ -1,5 +1,9 @@
 footer.footer {
-    background: #e5f6c0;
+    background: #e1fffb;
+    display: flex;
+    flex-direction: column;
+    background: url(../img/footer-bg.png);
+    background-size: auto 100%;
 }
 
 div#footer-container {padding: 28px 0;}
@@ -60,7 +64,7 @@ div#footer-cap {
 .socialmedia-footer svg {
     width: 48px;
     padding: 12px;
-    fill: #584563;
+    fill: #ffffff;
 }
 
 /***FOOTER BOTTOM END***/

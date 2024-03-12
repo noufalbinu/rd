@@ -40,8 +40,10 @@ get_header(); ?>
         <div class="content-here">
           
           <?php  the_content();  ?>
+          
         </div>
       </div>
+      <?php comments_template(); ?>
     <?php endwhile; ?>
   </div>
   <div class="theme-sidebar">

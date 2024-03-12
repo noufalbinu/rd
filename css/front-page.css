@@ -1,104 +1,335 @@
-a.nav-link { color: rgb(13, 45, 53) !important; }
-.main-banner-wrap {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgb(239 229 255) 50%, rgba(255,255,255,1) 99%);
+a.nav-link {
+     color: rgb(13, 45, 53) !important;
 }
-.main-banner {display: grid;grid-template-columns: 50% 50%;padding: 74px 0px;justify-items: start;align-items: center;}
-
-.bnr-img {
+ .main-banner-wrap {
+     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgb(229 255 237) 50%, rgba(255, 255, 255, 1) 99%);
+}
+ .main-banner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 74px 0px;
+    justify-items: start;
+    align-items: center;
+}
+ .bnr-img {
+     width: 100%;
+     padding-left: 13px;
+}
+ .bnr-img img {
+     width: 100%;
+     height: auto;
+}
+ .text-content h1 {
+    color: rgb(83 83 83);
+    font-weight: 600;
+    font-family: "Roboto Condensed", sans-serif;
+}
+ .bnr-search {
+     padding: 10px 0;
+     display: flex;
+     width: 100%;
+}
+ input.search-input {
+     padding: 20px 30px;
+     border-radius: 28px;
+     border: 1px solid #121212;
+     width: 70%;
+}
+ .search-input::placeholder {
+     color: #7c2df9;
+     font-size: 16px;
+}
+ .search-button {
+     background: #00af79;
+     border: 1px solid #ffffff;
+     border-radius: 50px;
+     color: #fff;
+     width: 50px;
+     height: 50px;
+     position: relative;
+     left: -53px;
+     top: 4px;
+}
+ svg.bnr-search-icon {
+     position: absolute;
+     right: 8px;
+     top: 9px;
+     width: 30px;
+     height: 30px;
+     visibility: visible;
+     fill: #00af79;
+}
+ svg.bnr-search-icon path {
+     stroke: #ffffff;
+}
+ .text-content p {
+     color: rgb(0, 0, 0);
+}
+ .resources-container {
+     background: rgb(236 244 253);
+}
+ svg.love {
+     filter: drop-shadow(rgb(64, 64, 64) 2px 4px 6px);
+}
+ @keyframes animate-svg-fill-1 {
+     0% {
+         fill: transparent;
+    }
+     100% {
+         fill: rgb(112, 212, 213);
+         filter: drop-shadow(rgb(0, 0, 0) 1px 3px 3px);
+    }
+}
+ .lovepath {
+     animation: 0.7s linear 0.3s 1 normal both running animate-svg-fill-1;
+}
+ .tagline h2 {
+     color: rgb(255, 255, 255);
+     font-size: 39px;
+     text-shadow: rgb(0, 0, 0) 1px 1px;
+     padding: 30px 0px;
+     font-family: Ubuntu, sans-serif;
+     height: 150px;
+     margin: 0px !important;
+}
+ .tagline {
+     width: 100%;
+     float: left;
+     text-align: center;
+}
+ .tagline p {
+     color: rgb(203, 203, 203);
+     padding: 0px;
+     line-height: 33px;
+     font-size: 22px;
+     font-family: "Bad Script", cursive;
+}
+ .bnr {
+     width: 700px;
+     margin: 0px auto;
+     display: block;
+}
+ .icon-badge span {
+     border-top: 1px solid rgb(251, 212, 198);
+     border-bottom: 1px solid rgb(251, 212, 198);
+     border-left: 1px solid rgb(251, 212, 198);
+     border-image: initial;
+     width: 20%;
+     float: left;
+     background: rgb(255, 237, 202);
+     margin-top: 30px;
+     padding: 18px 10px 5px;
+     text-align: center;
+     border-right: none;
+}
+ .icon-badge p {
+     float: none !important;
+}
+ .icon-badge i {
+     color: rgb(241, 90, 36);
+     font-size: 40px;
+}
+ .anim-button {
+     background: rgb(228, 223, 91);
+     color: rgb(10, 10, 10);
+     padding: 10px 30px;
+     margin-top: 10px;
+     font-weight: 800;
+     text-transform: uppercase;
+     border-radius: 4px;
+     box-shadow: rgb(62, 62, 62) 4px 4px 6px -2px;
+}
+ .get-it-now {
+    background: rgb(225 255 251);
+}
+h2.popular-locations {
+    text-align: center;
+    margin: 0;
+    padding: 42px 0px 4px;
+}
+ .get-it-now-wrap {
+    display: grid;
+    grid-template-columns: 32% 16.666% 16.666% 16.666% 16.666%;
+    padding: 30px 0px;
+    color: rgb(255, 246, 246);
+    place-items: center;
+    justify-content: center;
+}
+ .big-cat img {
+     width: 100%;
+}
+.big-cat img, .medium-cat img, .small-cat img {
     width: 100%;
-    padding-left: 13px;
+ border-radius: 10px;
 }
-.bnr-img img {
-    width: 100%;
-    height: auto;
+.big-cat, .medium-cat, .small-cat {
+    padding-right: 10px
 }
-.text-content h1 {color: rgb(98 50 132);font-weight: 600;font-family: "Roboto Condensed", sans-serif;}
-.bnr-search {
-    padding: 10px 0;
-    display: flex;
-    width: 100%;
+ .get-it-now-wrap p {
+    padding: 29px;
+    font-size: 18px;
 }
-input.search-input {
-    padding: 20px 30px;
-    border-radius: 28px;
-    border: 1px solid #7c2df9;
-    width: 70%;
+.fp-resort-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
 }
-.search-input::placeholder {
-    color: #7c2df9;
-    font-size: 16px;
+.resources {
+     overflow: auto;
+     width: 1100px;
+     margin: 0px auto;
+     padding: 35px 0px 54px;
+     text-align: center;
 }
-.search-button {
-    background: #7c2df9;
-    border: 1px solid #7c2df9;
-    border-radius: 50px;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    left: -53px;
-    top: 4px;
+ .resourec-doc-wrap {
+     display: grid;
+     grid-template-columns: 30% 70%;
+     justify-items: start;
 }
-svg.bnr-search-icon {
+ .blog-resources {
+     position: relative;
+     padding-right: 45px;
+}
+ .blog-resources::after {
+    content: "";
     position: absolute;
-    right: 8px;
-    top: 9px;
-    width: 30px;
-    height: 30px;
-    visibility: visible;
-    fill: #7c2df9;
+    background: linear-gradient(1deg, rgb(255 255 255 / 0%) 5%, rgb(145 224 255) 17%, rgb(151 212 236) 83%, rgb(255 255 255 / 0%) 95%);
+    width: 1px;
+    height: 100%;
+    bottom: 0px;
+    right: 0px;
 }
-svg.bnr-search-icon path {
-    stroke: #ffffff;
+.resources-wrap img {
+    width: 100%;
 }
-.text-content p { color: rgb(0, 0, 0); }
-.resources-container { background: rgb(255, 255, 255); }
-svg.love { filter: drop-shadow(rgb(64, 64, 64) 2px 4px 6px); }
-@keyframes animate-svg-fill-1 { 
-  0% { fill: transparent; }
-  100% { fill: rgb(112, 212, 213); filter: drop-shadow(rgb(0, 0, 0) 1px 3px 3px); }
-}
-.lovepath { animation: 0.7s linear 0.3s 1 normal both running animate-svg-fill-1; }
-.tagline h2 { color: rgb(255, 255, 255); font-size: 39px; text-shadow: rgb(0, 0, 0) 1px 1px; padding: 30px 0px; font-family: Ubuntu, sans-serif; height: 150px; margin: 0px !important; }
-.tagline { width: 100%; float: left; text-align: center; }
-.tagline p { color: rgb(203, 203, 203); padding: 0px; line-height: 33px; font-size: 22px; font-family: "Bad Script", cursive; }
-.bnr { width: 700px; margin: 0px auto; display: block; }
-.icon-badge span { border-top: 1px solid rgb(251, 212, 198); border-bottom: 1px solid rgb(251, 212, 198); border-left: 1px solid rgb(251, 212, 198); border-image: initial; width: 20%; float: left; background: rgb(255, 237, 202); margin-top: 30px; padding: 18px 10px 5px; text-align: center; border-right: none; }
-.icon-badge p { float: none !important; }
-.icon-badge i { color: rgb(241, 90, 36); font-size: 40px; }
-.anim-button { background: rgb(228, 223, 91); color: rgb(10, 10, 10); padding: 10px 30px; margin-top: 10px; font-weight: 800; text-transform: uppercase; border-radius: 4px; box-shadow: rgb(62, 62, 62) 4px 4px 6px -2px; }
-.get-it-now {background: rgb(0 175 121);}
-svg.theme-icon {
-    width: 72px;
+ .resource-book {
+    width: 100px;
     height: auto;
-    fill: #fff;
+    fill: #503366;
 }
-.get-it-now-wrap {display: grid;grid-template-columns: auto auto auto;padding: 30px 0px;color: rgb(255, 246, 246);place-items: center;justify-content: center;}
-.get-it-now-wrap p {padding: 29px;font-size: 18px;}
-.resources { overflow: auto; width: 1100px; margin: 0px auto; padding: 35px 0px 54px; text-align: center; }
-.resourec-doc-wrap { display: grid; grid-template-columns: 30% 70%; justify-items: start; }
-.blog-resources { position: relative; padding-right: 45px; }
-.blog-resources::after {content: "";position: absolute;background: linear-gradient(1deg, rgb(255, 255, 255) 5%, rgb(168, 204, 221) 17%, rgb(80 51 102) 83%, rgb(255, 255, 255) 95%);width: 1px;height: 100%;bottom: 0px;right: 0px;}
-.resource-book {width: 100px;height: auto;fill: #503366;}
-.resources h2 {text-transform: capitalize;color: rgb(80 51 102);font-size: 22px;}
-.sc {display: grid;grid-template-columns: auto auto auto;align-items: center;align-content: center;width: 100%;padding-left: 36px;justify-items: center;}
-.web { padding: 0px; width: 100%; }
-.scub {display: grid;grid-template-columns: auto;justify-content: center;align-items: center;padding: 10px;justify-items: center;}
-.excerpt-image {display: block;width: 179px;}
-.web h3 { padding: 8px; margin: 0px; }
-.web a {font-size: 15px;line-height: 23px;color: rgb(22 10 31);}
-.excerpt-image img {width: 100%;height: auto;border-radius: 16px;border: 5px solid rgb(227 233 231);}
-div#freelancer-online { }
-.direct-work { width: 1000px; margin: 0px auto; padding: 15px 0px; }
-.direct-work h2 { margin: 0px; color: rgb(255, 255, 255); padding: 37px 0px; }
-.direct-work ul li { color: rgb(255, 255, 255); line-height: 40px; margin-left: 29px; }
-p.fiver { line-height: 31px; color: rgb(77, 144, 254); padding: 48px 0px 50px; font-size: 20px; }
-p.fiver a { color: rgb(255, 255, 255); text-decoration: underline; }
-.second { width: 100%; overflow: hidden; float: left; height: 225px; color: rgb(0, 0, 0); }
-.second:hover { background-size: 120px; }
-.findme-container-wrap { background: rgb(205, 232, 176); }
-.findme-container { display: flex; max-width: 1100px; flex-direction: row; justify-content: center; align-items: center; margin: 0px auto; padding: 23px 0px; }
-.welcome { width: 60%; float: left; border: 1px solid rgb(169, 203, 169); border-radius: 9px; text-align: center; padding: 30px 30px 0px; background: rgb(227, 251, 179); box-shadow: rgba(58, 58, 58, 0.17) 13px 14px 19px -19px; }
-.findme { background: rgb(225, 243, 183); width: 40%; float: right; margin: 0px 10px; padding: 10px 34px; border-radius: 9px; box-shadow: rgb(58, 58, 58) 13px 14px 19px -23px; border: 1px solid rgb(217, 217, 217); }
-.findme p { padding: 8px 0px 20px; }
-.findme a { background: rgb(255, 128, 0); padding: 12px 20px; border-radius: 4px; margin-right: 5px; font-weight: 600; color: rgb(255, 255, 255); }
+ .resources h2 {
+    text-transform: capitalize;
+    color: rgb(80 51 102);
+    font-size: 22px;
+}
+ .sc {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    padding-left: 36px;
+    justify-items: center;
+}
+ .web {
+     padding: 0px;
+     width: 100%;
+}
+ .scub {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    justify-items: center;
+}
+ .excerpt-image {
+    display: block;
+    width: 179px;
+}
+ .web h3 {
+     padding: 8px;
+     margin: 0px;
+}
+ .web a {
+    font-size: 15px;
+    line-height: 23px;
+    color: rgb(22 10 31);
+}
+ .excerpt-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 5px solid rgb(227 233 231);
+}
+ div#freelancer-online {
+}
+ .direct-work {
+     width: 1000px;
+     margin: 0px auto;
+     padding: 15px 0px;
+}
+ .direct-work h2 {
+     margin: 0px;
+     color: rgb(255, 255, 255);
+     padding: 37px 0px;
+}
+ .direct-work ul li {
+     color: rgb(255, 255, 255);
+     line-height: 40px;
+     margin-left: 29px;
+}
+ p.fiver {
+     line-height: 31px;
+     color: rgb(77, 144, 254);
+     padding: 48px 0px 50px;
+     font-size: 20px;
+}
+ p.fiver a {
+     color: rgb(255, 255, 255);
+     text-decoration: underline;
+}
+ .second {
+     width: 100%;
+     overflow: hidden;
+     float: left;
+     height: 225px;
+     color: rgb(0, 0, 0);
+}
+ .second:hover {
+     background-size: 120px;
+}
+ .findme-container-wrap {
+     background: rgb(205, 232, 176);
+}
+ .findme-container {
+     display: flex;
+     max-width: 1100px;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     margin: 0px auto;
+     padding: 23px 0px;
+}
+ .welcome {
+     width: 60%;
+     float: left;
+     border: 1px solid rgb(169, 203, 169);
+     border-radius: 9px;
+     text-align: center;
+     padding: 30px 30px 0px;
+     background: rgb(227, 251, 179);
+     box-shadow: rgba(58, 58, 58, 0.17) 13px 14px 19px -19px;
+}
+ .findme {
+     background: rgb(225, 243, 183);
+     width: 40%;
+     float: right;
+     margin: 0px 10px;
+     padding: 10px 34px;
+     border-radius: 9px;
+     box-shadow: rgb(58, 58, 58) 13px 14px 19px -23px;
+     border: 1px solid rgb(217, 217, 217);
+}
+ .findme p {
+     padding: 8px 0px 20px;
+}
+ .findme a {
+     background: rgb(255, 128, 0);
+     padding: 12px 20px;
+     border-radius: 4px;
+     margin-right: 5px;
+     font-weight: 600;
+     color: rgb(255, 255, 255);
+}
+ 
