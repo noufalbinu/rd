@@ -54,7 +54,7 @@ header {
     justify-content: space-between;
 }
 .logo img {
-    width: 260px;
+    width: 105px;
     padding-top: 10px;
 }
 form#search-form {position: relative;}

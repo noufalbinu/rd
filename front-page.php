@@ -52,9 +52,12 @@
         <div class="resources-container">
             <div class="resources container-width-1100">
                 <h2>New Themes</h2>
-                <div class="resourec-doc-wrap">
+                <div class="">
                     <div class='fp-resort-list'>
                          <?php 
+                        
+
+                        add_shortcode('cat_desc', 'wpb_catlist_desc');
                          $args = array(
                             'post_type'     => 'resort',
                             'posts_per_page' => 18, 
@@ -62,17 +65,23 @@
                         );
                         $rp = new WP_Query( $args );
                         if($rp->have_posts()) :
-                        while($rp->have_posts()) : $rp->the_post();?>
-                        
-
- 
-                        <div class='list'>
-                           <div class='list-item'>
-                               <div class="excerpt-image"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( array(300, 200) );  } ?></div>
-                               <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></h3></a>
-                           </div>
-                        </div>
-                        <?php endwhile; wp_reset_postdata(); endif;?>
+                            while($rp->have_posts()) : $rp->the_post();
+                                $term = "";
+                                $terms = wp_get_post_terms( $post->ID, 'resort', array( 'fields' => 'names' ) );
+                                foreach($terms as $term) {
+                                    $term;
+                                }
+                                ?>
+                                <div class='list'>
+                                    <div class='list-item'>
+                                       <div class="excerpt-image"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( array(300, 200) );  } ?></div>
+                                       <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></h3></a>
+                                    <p><?php echo $term; ?></p>
+                                    </div>
+                                </div>
+                                <?php 
+                            endwhile; wp_reset_postdata(); 
+                        endif;?>
                     </div>
                 </div>
             </div>

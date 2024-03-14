@@ -171,8 +171,9 @@ h2.popular-locations {
 }
 .fp-resort-list {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
+    justify-items: center;
 }
 .resources {
      overflow: auto;
