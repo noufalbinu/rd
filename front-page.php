@@ -54,9 +54,7 @@
                 <h2>New Themes</h2>
                 <div class="">
                     <div class='fp-resort-list'>
-                         <?php 
-                        
-
+                        <?php 
                         add_shortcode('cat_desc', 'wpb_catlist_desc');
                          $args = array(
                             'post_type'     => 'resort',
@@ -74,9 +72,11 @@
                                 ?>
                                 <div class='list'>
                                     <div class='list-item'>
-                                       <div class="excerpt-image"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( array(300, 200) );  } ?></div>
-                                       <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></h3></a>
-                                    <p><?php echo $term; ?></p>
+                                        <div class="excerpt-image"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( array(300, 200) );  } ?></div>
+                                        <div class="list-item-text-container">
+                                            <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></h3></a>
+                                            <p><?php echo $term; ?></p>
+                                        </div>
                                     </div>
                                 </div>
                                 <?php 

@@ -49,9 +49,9 @@ get_header(); ?>
   <div class="theme-sidebar">
     
     <div class="project-details">
-    <b class="theme-details-title">Theme Details</b>
-      <p><span class="dashicons dashicons-businessman"></span> Theme Name: <?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_author', true ) ); ?></p>
-      <p><span class="dashicons dashicons-admin-appearance"></span> Theme version: <?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_published_date', true ) ); ?></p>
+    <b class="theme-details-title">Property Details</b>
+      <p><span class="dashicons dashicons-businessman"></span> Location: <?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_author', true ) ); ?></p>
+      <p><span class="dashicons dashicons-admin-appearance"></span> Price Range: <?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_published_date', true ) ); ?></p>
       <p><span class="dashicons dashicons-admin-links"></span> Supports Up to:  <?php echo esc_attr( get_post_meta( get_the_ID(), 'hcf_price', true ) ); ?></p>
     </div>
     <div class="project-buttons">

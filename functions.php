@@ -180,7 +180,7 @@ function codex_resort_init() {
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		
-        'taxonomies' => ['resort'],
+        'taxonomies' => ['resort','location', 'features'],
 
 		'show_in_menu'       => true,
 		'query_var'          => true,
@@ -193,13 +193,28 @@ function codex_resort_init() {
 	);
 	register_post_type( 'resort', $args );
 }
+register_taxonomy( 'features', array('resort'), 
+    array(
+     'hierarchical' => true, 
+     'label' => 'Add Features', 
+     'singular_label' => 'Features', 
+     'rewrite' => array( 'slug' => 'features', 'with_front'=> false )
+     )
+);
 register_taxonomy( 'resort', array('resort'), 
-
     array(
      'hierarchical' => true, 
      'label' => 'Resort', 
      'singular_label' => 'Resort Category', 
      'rewrite' => array( 'slug' => 'resort-category', 'with_front'=> false )
+     )
+);
+register_taxonomy( 'location', array('resort'), 
+    array(
+     'hierarchical' => true, 
+     'label' => 'Location', 
+     'singular_label' => 'Location', 
+     'rewrite' => array( 'slug' => 'location', 'with_front'=> false )
      )
 );
 
