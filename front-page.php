@@ -26,11 +26,11 @@
         <h2 class="popular-locations">Popular Locations</h2>
         <div class="get-it-now-wrap  container-width-1100">
             <div class="big-cat">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>\assets\images\dummy-cat-banner-600-400.png" alt="">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>\assets\images\munnar.jpg" alt="">
             </div>
             <div class="medium-cat">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>\assets\images\dummy-cat-banner-600-400.png" alt="">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>\assets\images\dummy-cat-banner-600-400.png" alt="">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>\assets\images\alappuzha.jpeg" alt="">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>\assets\images\waynadu.jpg" alt="">
             </div>
             <div class="medium-cat">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>\assets\images\dummy-cat-banner-600-400.png" alt="">
