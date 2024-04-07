@@ -158,15 +158,15 @@ function codex_resort_init() {
 	$labels = array(
 		'name'               => _x( 'resort', 'post type general name', 'your-plugin-textdomain' ),
 		'singular_name'      => _x( 'resort', 'post type singular name', 'your-plugin-textdomain' ),
-		'menu_name'          => _x( 'resort', 'admin menu', 'your-plugin-textdomain' ),
+		'menu_name'          => _x( 'Property Ads', 'admin menu', 'your-plugin-textdomain' ),
 		
-		'name_admin_bar'     => _x( 'resort', 'add new on admin bar', 'your-plugin-textdomain' ),
-		'add_new'            => _x( 'Add New', 'Theme', 'your-plugin-textdomain' ),
+		'name_admin_bar'     => _x( 'Resort', 'add new on admin bar', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New Property', 'Theme', 'your-plugin-textdomain' ),
 		'add_new_item'       => __( 'Add New Theme', 'your-plugin-textdomain' ),
 		'new_item'           => __( 'New Theme', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Theme', 'your-plugin-textdomain' ),
 		'view_item'          => __( 'View Theme', 'your-plugin-textdomain' ),
-		'all_items'          => __( 'All Theme', 'your-plugin-textdomain' ),
+		'all_items'          => __( 'All Ads', 'your-plugin-textdomain' ),
 		'search_items'       => __( 'Search Theme', 'your-plugin-textdomain' ),
 		'parent_item_colon'  => __( 'Parent Theme:', 'your-plugin-textdomain' ),
 		'not_found'          => __( 'No Theme found.', 'your-plugin-textdomain' ),
@@ -219,13 +219,83 @@ register_taxonomy( 'location', array('resort'),
 );
 
 
+/**
+ * Create two taxonomies, genres and writers for the post type "book".
+ *
+ * @see register_post_type() for registering custom post types.
+ */
+function wpdocs_create_book_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Genres', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Genre', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Search Genres', 'textdomain' ),
+		'all_items'         => __( 'All Genres', 'textdomain' ),
+		'parent_item'       => __( 'Parent Genre', 'textdomain' ),
+		'parent_item_colon' => __( 'Parent Genre:', 'textdomain' ),
+		'edit_item'         => __( 'Edit Genre', 'textdomain' ),
+		'update_item'       => __( 'Update Genre', 'textdomain' ),
+		'add_new_item'      => __( 'Add New Genre', 'textdomain' ),
+		'new_item_name'     => __( 'New Genre Name', 'textdomain' ),
+		'menu_name'         => __( 'Genre', 'textdomain' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'genre' ),
+	);
+
+	register_taxonomy( 'genre', array( 'resort' ), $args );
+
+	unset( $args );
+	unset( $labels );
+
+	// Add new taxonomy, NOT hierarchical (like tags)
+	$labels = array(
+		'name'                       => _x( 'Writers', 'taxonomy general name', 'textdomain' ),
+		'singular_name'              => _x( 'Writer', 'taxonomy singular name', 'textdomain' ),
+		'search_items'               => __( 'Search Writers', 'textdomain' ),
+		'popular_items'              => __( 'Popular Writers', 'textdomain' ),
+		'all_items'                  => __( 'All Writers', 'textdomain' ),
+		'parent_item'                => null,
+		'parent_item_colon'          => null,
+		'edit_item'                  => __( 'Edit Writer', 'textdomain' ),
+		'update_item'                => __( 'Update Writer', 'textdomain' ),
+		'add_new_item'               => __( 'Add New Writer', 'textdomain' ),
+		'new_item_name'              => __( 'New Writer Name', 'textdomain' ),
+		'separate_items_with_commas' => __( 'Separate writers with commas', 'textdomain' ),
+		'add_or_remove_items'        => __( 'Add or remove writers', 'textdomain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used writers', 'textdomain' ),
+		'not_found'                  => __( 'No writers found.', 'textdomain' ),
+		'menu_name'                  => __( 'Writers', 'textdomain' ),
+	);
+
+	$args = array(
+		'hierarchical'          => false,
+		'labels'                => $labels,
+		'show_ui'               => true,
+		'show_admin_column'     => true,
+		'update_count_callback' => '_update_post_term_count',
+		'query_var'             => true,
+		'rewrite'               => array( 'slug' => 'writer' ),
+	);
+
+	register_taxonomy( 'writer', 'book', $args );
+}
+// hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'wpdocs_create_book_taxonomies', 0 );
+
 
 
 /**
  * Register meta boxes.
  */
 function hcf_register_meta_boxes() {
-    add_meta_box( 'hcf-1', __( 'Hello Custom Field', 'hcf' ), 'hcf_display_callback', 'resort' );
+    add_meta_box( 'hcf-1', __( 'Property Details', 'hcf' ), 'hcf_display_callback', 'resort' );
 }
 add_action( 'add_meta_boxes', 'hcf_register_meta_boxes' );
 
@@ -452,8 +522,6 @@ function my_custom_background_setup() {
 }
 add_action( 'after_setup_theme', 'my_custom_background_setup' );
 
-
-
 add_action( 'admin_init', 'theme_options_init' );
 add_action( 'admin_menu', 'theme_options_add_page' ); 
 
@@ -481,7 +549,7 @@ show_admin_bar(false);
 add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
 
 
-//Customize Default wp dashboard
+//Customize Default wp 
 add_filter( 'style_loader_src', 'hijack_login_src', 10, 2 );
 
 function hijack_login_src( $src, $handle ) {

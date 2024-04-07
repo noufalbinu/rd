@@ -21,10 +21,8 @@ function nextSl(){
   slide=(slide+1)%slides.length; //0+1=1 % 6
   slides[slide].classList.add("current_video");
   textslide[slide].classList.add("current_text");
-
   //text slide move next
   playCheckup(); // Call checkup function when current_video class is added
-  
   let pointer = document.querySelector(".point");
   pointer.dataset.current = slide; //change pointer data attribute value with slide
 }
@@ -37,19 +35,14 @@ function leftSl(){
       count = slides.length -1;
       slides[slide].classList.remove("current_video");
       textslide[slide].classList.remove("current_text");
-    
       slide = count; 
-      
       slides[slide].classList.add("current_video");
       textslide[slide].classList.add("current_text");
       pointer.dataset.current = slide;
-      
   } else {
       slides[slide].classList.remove("current_video");
       textslide[slide].classList.remove("current_text");
-    
       slide = count; 
-      
       slides[slide].classList.add("current_video");
       textslide[slide].classList.add("current_text");
       pointer.dataset.current = slide;
@@ -85,14 +78,12 @@ aRight.addEventListener('click', () => {
   nextSl();
 });
 
-
 // handling mousewheell
 let sTop = document.querySelector(".maze");
 let isScrolling = false;
 
 sTop.addEventListener('wheel', (e) => {
   e.stopPropagation();
-
   if (!isScrolling) {
     isScrolling = true;
     let delta = e.deltaY;
@@ -106,7 +97,6 @@ sTop.addEventListener('wheel', (e) => {
     }, 1000); // Set your desired delay time in milliseconds
   }
 });
-
 
 // Handling swipe finger Mobile
 let touchstartX = 0
@@ -157,9 +147,9 @@ function playCheckup() {
   };
   // Play video function
   async function playVid() {      
-      if (video.paused && !isPlaying) {
-          return video.play();
-      }
+    if (video.paused && !isPlaying) {
+        return video.play();
+    }
   } 
   // Pause video function
   function pauseVid() {     

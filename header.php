@@ -32,7 +32,7 @@
 	<div class="header-outer-nav ">
 	    <div class="outer-nav-wrap container-width-1100">
 			<p class="notification-nav">
-Looking to get more wordpress website traffic? Allwpseo provides strategies for SEO : <a href="https://allwpseo.com">Drive more traffic now</a></p>
+Join Our Adventure Camping Group: <a href="https://chat.whatsapp.com/EMGE4B5HtTaGTrpxyge9M2">Join Now</a></p>
         </div>
     </div>
     <header>
@@ -54,15 +54,12 @@ Looking to get more wordpress website traffic? Allwpseo provides strategies for 
 		    	<div class="nav-container">
 		            <ul class="navbar-nav">
 		            	<li class="nav-item">
-		            		<a href="#" class="nav-link">WordPress Themes</a>
-							<ul class="dropdown">
-		            			<li class="nav-item">
-		            				<a href="/Themes" class="nav-link">Free Themes</a>
-		            			</li>
-		            			<li class="nav-item">
-		            				<a href="/themes" class="nav-link">Premium Themes</a>
-		            			</li>
-		            		</ul>
+		            		<a href="#" class="nav-link">Packages</a>
+						</li>
+						<li class="nav-item">
+		            		<a href="#" class="nav-link">Blog</a>
+		            	</li>
+						<!--------------
 		            	<li class="nav-item">
 		            		<a href="#" class="nav-link">Resources</a>
 		            		<ul class="dropdown">
@@ -73,7 +70,7 @@ Looking to get more wordpress website traffic? Allwpseo provides strategies for 
 		            				<a href="/documentai" class="nav-link">Docs</a>
 		            			</li>
 		            		</ul>
-		            	</li>		
+		            	</li>----->		
 		            </ul>
 		    		<div class="navbar-utils">
 		        	    <form id="search-form" name="myform" role="search" method="get" action="<?php echo home_url(); ?>">  

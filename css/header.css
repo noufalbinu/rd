@@ -27,7 +27,7 @@ a:hover {
 	 margin-top: 2em;
 }
 .header-outer-nav {
-    background: #00af79;
+    background: #6dcc93;
     padding: 20px;
     color: #fff;
 }
@@ -54,7 +54,7 @@ header {
     justify-content: space-between;
 }
 .logo img {
-    width: 105px;
+    height: 100%;
     padding-top: 10px;
 }
 form#search-form {position: relative;}

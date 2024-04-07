@@ -11,6 +11,19 @@ a.nav-link {
     justify-items: start;
     align-items: center;
 }
+.icon-set {
+    padding: 21px 0;
+}
+.icon-set img {
+    padding: 0 11px;
+    border-right: 1px solid #d2e3de;
+}
+.icon-set svg {
+    padding: 0 11px;
+    border-right: 1px solid #d2e3de;
+    width: 80px;
+    height: auto;
+}
  .bnr-img {
      width: 100%;
      padding-left: 13px;
@@ -28,36 +41,40 @@ a.nav-link {
      padding: 10px 0;
      display: flex;
      width: 100%;
+     align-content: center;
+     flex-direction: row;
+     justify-content: flex-start;
 }
  input.search-input {
-     padding: 20px 30px;
-     border-radius: 28px;
+     padding: 10px 29px;
+     border-radius: 10px 0 0 10px;
      border: 1px solid #121212;
      width: 70%;
+     height: 59px;
+     color: #fff;
 }
  .search-input::placeholder {
-     color: #7c2df9;
+     color: #85a59b;
      font-size: 16px;
 }
  .search-button {
-     background: #00af79;
-     border: 1px solid #ffffff;
-     border-radius: 50px;
+     background: #6dcc93;
+     border: 1px solid #000000;
+     border-left: 0;
+     border-radius: 0 10px 10px 0;
      color: #fff;
-     width: 50px;
-     height: 50px;
+     width: 105px;
+     height: 59px;
      position: relative;
-     left: -53px;
-     top: 4px;
 }
  svg.bnr-search-icon {
      position: absolute;
-     right: 8px;
-     top: 9px;
-     width: 30px;
-     height: 30px;
+     right: 32px;
+     top: 4px;
+     width: 38px;
+     height: 53px;
      visibility: visible;
-     fill: #00af79;
+     fill: #6dcc93;
 }
  svg.bnr-search-icon path {
      stroke: #ffffff;
@@ -66,7 +83,7 @@ a.nav-link {
      color: rgb(0, 0, 0);
 }
  .resources-container {
-     background: rgb(236 244 253);
+     background: #fff;
 }
  svg.love {
      filter: drop-shadow(rgb(64, 64, 64) 2px 4px 6px);
@@ -140,7 +157,7 @@ a.nav-link {
      box-shadow: rgb(62, 62, 62) 4px 4px 6px -2px;
 }
  .get-it-now {
-    background: rgb(225 255 251);
+    background: rgb(247 253 252);
 }
 h2.popular-locations {
     text-align: center;
@@ -149,11 +166,12 @@ h2.popular-locations {
 }
  .get-it-now-wrap {
     display: grid;
-    grid-template-columns: 32% 16.666% 16.666% 16.666% 16.666%;
+    grid-template-columns: 30% 70%;
     padding: 30px 0px;
     color: rgb(255, 246, 246);
     place-items: center;
     justify-content: center;
+    align-items: start;
 }
  .big-cat img {
      width: 100%;
@@ -164,6 +182,31 @@ h2.popular-locations {
 }
 .big-cat, .medium-cat, .small-cat {
     padding-right: 10px
+}
+.medium-cat-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+}
+.big-cat, .medium-cat {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.big-cat b {
+    position:absolute;
+    bottom: 0;
+    font-size:27px;
+    width: 89%;
+    border-top: 1px solid;
+}
+.medium-cat b {
+    position: absolute;
+    bottom: 0;
+    width: 88%;
+    border-top: 1px solid;
+    font-size: 16px;
 }
  .get-it-now-wrap p {
     padding: 29px;
@@ -234,9 +277,14 @@ h2.popular-locations {
     padding: 10px;
     justify-items: center;
 }
+.list {
+    background: #eef6f1;
+    border-radius: 14px;
+    margin-top: 30px;
+}
  .excerpt-image {
     display: block;
-    width: 179px;
+    width: 255px;
 }
  .web h3 {
      padding: 8px;
@@ -250,10 +298,27 @@ h2.popular-locations {
  .excerpt-image img {
     width: 100%;
     height: auto;
-    border-radius: 16px;
-    border: 5px solid rgb(227 233 231);
+    border-radius: 16px 16px 0 0;
 }
- div#freelancer-online {
+.loc {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.loc a {
+    display: flex;
+    flex-direction: column;
+}
+.loc:before {
+    content: "";
+    height: 35px;
+    width: 35px;
+    background: url(./../assets/images/loc.svg) no-repeat;
+    background-size: 35px;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    z-index: 5;
 }
  .direct-work {
      width: 1000px;

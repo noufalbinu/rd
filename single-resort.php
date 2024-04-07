@@ -24,31 +24,42 @@ get_header(); ?>
 <div class="theme-single-container-wrap container-width-1100">
   <div class="theme-container">
     <div class="excerpt-image"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'full' );  } ?></div>
-    <div class="cta-container">
-      <a class="download-cta cta-preview" href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'cta_preview', true ) ); ?>">
-        Live Preview
-      </a>
-      
-      <div class="features">
+    <div class="features">
         <?php
-          $terms = get_the_terms( $post->ID , 'features' );
-          foreach ( $terms as $term ) {
-            $term;
-          }
-          ?>
-         <p><?php  echo $term->name; ?></p>
+         $terms = wp_get_post_terms( $post->ID, 'features');
+                 foreach($terms as $term) {
+             echo "<a href='".get_term_link($term)."' title='".$term->name."'>".$term->name."</a>";
+         }
+         echo "</span>"; ?>
       </div>
-    </div>
     <?php while ( have_posts() ) : the_post(); ?>
       <div class="">
         <div class="content-here">
-          
           <?php  the_content();  ?>
-          
         </div>
       </div>
-      <?php comments_template(); ?>
+      
     <?php endwhile; ?>
+    <?php
+      $icons = apply_filters( 'taxonomy-images-list-the-terms', '', array(
+        'before'       => '<div class="my-custom-class-name">',
+        'after'        => '</div>',
+        'before_image' => '<span>',
+        'after_image'  => '</span>',
+        'image_size'   => 'detail',
+        'taxonomy'     => 'post_tag',
+      ) );
+      print_r($icons);
+      if ( ! empty( $icons ) ) {
+      	print '<ul>';
+      	foreach ( (array) $icons as $icon ) {
+          echo wp_get_attachment_image( get_the_ID(), array('700', '600'), "", array( "class" => "img-responsive" ) ); 
+      		print '<li><a href="' . esc_url( get_term_link( $icon, $icon->taxonomy ) ) . '">' . wp_get_attachment_image( $icon->image_id, 'detail' ) . '</a></li>';
+      	}
+      	print '</ul>';
+      } ?>
+
+<?php comments_template(); ?>
   </div>
   <div class="theme-sidebar">
     <div class="project-details">

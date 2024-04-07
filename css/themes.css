@@ -12,13 +12,10 @@
     width: 100%;
 }
 .project-buttons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
-.cta-container {
-    display: flex;
-    justify-content: center;
-}
+
 .download-cta {
     padding: 9px;
     margin-top: 10px;
@@ -26,17 +23,24 @@
     text-align: center;
     color: #fff;
 }
-.cta-preview {
-    background-color: #3f7de0;
-	display:block;
-	width:200px;
-	
+
+.features {
+    display: flex;
+    width: 100%;
+    border: 3px solid #006e4c;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 20px;
 }
 .cta-free {
-    background-color: #3f7de0;
+    background-color: #006e4c;
+    width: 98%;
+    margin-right: 2%;
 }
 .cta-pro {
-    background-color: #623284;
+    background-color: #305e50;
+    width: 98%;
+    margin-left: 2%;
 }
 .cta-doc {
     background-color: #9fcb3a;

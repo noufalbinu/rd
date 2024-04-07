@@ -21,10 +21,11 @@
             </ul>
           </div>
           <div class='links'>
-            <h3>Free Tools</h3>
+            <h3>Trending Locations</h3>
             <ul>
-            <li><a href='https://allwpseo.com/analytics/'>SEO Analytics</a></li>
-            <li><a href='https://allwpseo.com/analytics/competitor-analysis'>Competitor Analysis</a></li>
+            <li><a href='https://allwpseo.com/analytics/'>Kakkadampoyil</a></li>
+            <li><a href='https://allwpseo.com/analytics/competitor-analysis'>Wayanad</a></li>
+            <li><a href='https://allwpseo.com/analytics/competitor-analysis'>Mantro thuruth</a></li>
             </ul>
           </div>
           <div class='feed'>
