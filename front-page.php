@@ -17,12 +17,14 @@
                 </div>
                 
                 <div class="bnr-search">
-                    <input class="search-input" placeholder="Search Resorts, Hotel & Camping" type="search">
+                    <form role="search" method="get" action="<?php echo home_url('/'); ?>">
+                    <input class="search-input" placeholder="Search Resorts, Hotel & Camping"  name="s" value="<?php the_search_query(); ?>" type="search">
                     <button class="search-button" placeholder="Search Themes" type="button">
                     <svg class="bnr-search-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 24L20.2223 20.2156M22.3158 15.1579C22.3158 17.0563 21.5617 18.8769 20.2193 20.2193C18.8769 21.5617 17.0563 22.3158 15.1579 22.3158C13.2595 22.3158 11.4389 21.5617 10.0965 20.2193C8.75413 18.8769 8 17.0563 8 15.1579C8 13.2595 8.75413 11.4389 10.0965 10.0965C11.4389 8.75413 13.2595 8 15.1579 8C17.0563 8 18.8769 8.75413 20.2193 10.0965C21.5617 11.4389 22.3158 13.2595 22.3158 15.1579Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                     </button>
+                    </form>
                 </div>
             </div>
             <div class="column bnr-img">

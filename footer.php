@@ -50,7 +50,7 @@
     <p>Copyright © <script>document.write(new Date().getFollYear())</script> wpadroit.com | <a href='/privacy'>Privacy Policy</a></p>
   </div>
 </footer>
- <!---- Slider Controls End---->
+<!---- Slider Controls End---->
 
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/nav.js"></script>
 <script>

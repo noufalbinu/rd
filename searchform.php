@@ -6,7 +6,6 @@
 <!-- Header -->
 <?php include (TEMPLATEPATH . '/header.php'); ?> 
 <!-- End Header -->
-hhhhhhhhhhhhhhhhhhhh
 <!---------   BLOG CONTAINER   ---------->
 <div class='blog-container' id='blog-container'>
     
@@ -32,7 +31,7 @@ if ( $the_query->have_posts() ) {
                     </li>
                  <?php
         }
-    }else{
+    } else {
 ?>
         <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
         <div class="alert alert-info">

@@ -2,6 +2,28 @@
     .main-banner-wrap {
         background: #e5e1eb;
     }
+    .main-banner {
+    display: grid;
+    grid-template-columns: 100% !important;
+    padding: 74px 0px;
+    justify-items: start;
+    align-items: center;
+    }
+    .get-it-now-wrap {
+    display: grid;
+    grid-template-columns:  100% !important;
+    padding: 30px 0px;
+    color: rgb(255, 246, 246);
+    place-items: center;
+    justify-content: center;
+    align-items: start;
+}
+    .fp-resort-list {
+    display: grid;
+    grid-template-columns: 50% 50% !important;
+    align-items: center;
+    justify-items: center;
+}
     .get-it-now {
         grid-template-columns: auto !important;
         justify-items: center;
@@ -10,6 +32,7 @@
         text-align: center;
     }
     .excerpt-image {
+    width: 100% !important;
     }
     .scub {
         display: grid;

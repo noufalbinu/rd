@@ -215,7 +215,7 @@ h2.popular-locations {
 .fp-resort-list {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    align-items: center;
+    column-gap: 10px;
     justify-items: center;
 }
 .resources {
