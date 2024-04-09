@@ -1,5 +1,6 @@
 <!---- https://developer.wordpress.org/reference/functions/wp_insert_post/ --->
 
+
 <?php $postTitle = $_POST['post_title'];
 $post = $_POST['post'];
 $submit = $_POST['submit'];
@@ -26,24 +27,21 @@ if(isset($submit)){
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Untitled Document</title>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/submit-property.css"/>
 </head>
 
 <body>
     <div id="wrap">
+      <h1>Add your Property</h1>
     <form action="" method="post">
-<table border="1" width="200">
-  <tr>
-    <td><label for="post_title">Post Title</label></td>
-    <td><input name="post_title" type="text" /></td>
-  </tr>
-  <tr>
-    <td><label for="post">Post</label></td>
-    <td><input name="post" type="text" /></td>
-  </tr>
-</table>
-
-<input name="submit" type="submit" value="submit" />
-</form>
+      <div class="form-base">
+          <label for="post_title">Post Title</label>
+          <input name="post_title" type="text">
+          <label for="post">Post</label>
+          <textarea name="post" type="text" ></textarea>
+          <input name="submit" type="submit" value="submit" />
+      </div>
+    </form>
 </div>
 
 </body>
