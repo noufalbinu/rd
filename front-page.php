@@ -32,6 +32,12 @@
             </div>
         </div>
     </div>
+    <div class="header-outer-nav container-width-1100">
+	    <div class="outer-nav-wrap ">
+			<p class="notification-nav">
+Join Our Adventure Camping Group: <a href="https://chat.whatsapp.com/EMGE4B5HtTaGTrpxyge9M2">Join Now</a></p>
+        </div>
+    </div>
     <div class="get-it-now ">
         <h2 class="popular-locations">Best Tourist Destinations in Kerala</h2>
         <div class="get-it-now-wrap  container-width-1100">

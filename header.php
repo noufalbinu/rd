@@ -29,12 +29,7 @@
     <!----- JS ------>	
 </head>
 <body>
-	<div class="header-outer-nav ">
-	    <div class="outer-nav-wrap container-width-1100">
-			<p class="notification-nav">
-Join Our Adventure Camping Group: <a href="https://chat.whatsapp.com/EMGE4B5HtTaGTrpxyge9M2">Join Now</a></p>
-        </div>
-    </div>
+	
     <header>
 	    <div class="header-wrap container-width-1100">
             <div class="logo">
@@ -72,6 +67,7 @@ Join Our Adventure Camping Group: <a href="https://chat.whatsapp.com/EMGE4B5HtTa
 		            		</ul>
 		            	</li>----->		
 		            </ul>
+					<a class="add-listing-button" href="add-property">Add Property</a>
 		    		<div class="navbar-utils">
 		        	    <form id="search-form" name="myform" role="search" method="get" action="<?php echo home_url(); ?>">  
                             <input autocomplete="off" class="search-field" id="search-text" name="s" placeholder="<?php echo esc_attr_x( 'Search…', 'placeholder' ) ?>" type="text" value="<?php the_search_query(); ?>" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />

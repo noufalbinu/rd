@@ -29,11 +29,11 @@
             </ul>
           </div>
           <div class='feed'>
-            <h3>Our Initiative</h3>
+            <h3>Our Services</h3>
             <ul>
-            <li><a href='https://allwpseo.com'>Allwpseo</a></li>
-            <li><a href='https://wpadroit.com/vBook'>Tour Pacakge Listing WP Plugin</a></li>
-            <li><a href='https://wpadroit.com/aSlider'>aSlider Media Slider Plugin</a></li>
+            <li><a href='https://resortdeals.in'>Allwpseo</a></li>
+            <li><a href='https://resortdeals.in/vBook'>Tour Pacakge Listing WP Plugin</a></li>
+            <li><a href='https://resortdeals.in/aSlider'>aSlider Media Slider Plugin</a></li>
             </ul>
           </div>
         </div>

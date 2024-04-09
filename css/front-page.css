@@ -1,6 +1,9 @@
 a.nav-link {
      color: rgb(13, 45, 53) !important;
 }
+.navbar-utils {
+    display:none;
+}
  .main-banner-wrap {
      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgb(229 255 237) 50%, rgba(255, 255, 255, 1) 99%);
 }
@@ -37,7 +40,7 @@ a.nav-link {
     font-weight: 600;
     font-family: "Roboto Condensed", sans-serif;
 }
- .bnr-search {
+ .bnr-search form {
      padding: 10px 0;
      display: flex;
      width: 100%;
