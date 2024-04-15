@@ -86,7 +86,7 @@ set_post_thumbnail($post_id, $attachment_id);
           <input name="post_title" type="text">
           <label for="post">Post</label>
           <textarea name="post" type="text" ></textarea>
-          <input id="upload_image_button" name="upload_image" type="text" value="<?php if (isset($options['upload-image'])) echo esc_attr($options['upload-image']); ?>">
+          <input id="upload_image_button" name="upload_image" type="file" value="<?php if (isset($options['upload-image'])) echo esc_attr($options['upload-image']); ?>">
           
           <input name="submit" type="submit" value="submit" />
       </div>
