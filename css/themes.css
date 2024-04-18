@@ -2,10 +2,10 @@
     display: grid;
     grid-template-columns: auto auto;
     margin-bottom: 40px;
+    grid-gap: 30px;
 }
 .theme-container {
-	width: 700px;
-	margin-right: 30px;
+	width: 100%;
 }
 .excerpt-image img {
     height: auto;
