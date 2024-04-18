@@ -33,7 +33,7 @@ get_header(); ?>
         <?php
          $terms = wp_get_post_terms( $post->ID, 'features');
                  foreach($terms as $term) {
-             echo "<a href='".get_term_link($term)."' title='".$term->name."'>".$term->name."</a>";
+             echo "<i class='fa-solid fa-check'></i> <a href='".get_term_link($term)."' title='".$term->name."'>".$term->name."</a>";
          }
          echo "</span>"; ?>
         </div>

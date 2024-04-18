@@ -67,7 +67,7 @@
 		            		</ul>
 		            	</li>----->		
 		            </ul>
-					<a class="add-listing-button" href="add-property"><i class="fa-solid fa-plus"></i> Add Property</a>
+					
 		    		<div class="navbar-utils">
 		        	    <form id="search-form" name="myform" role="search" method="get" action="<?php echo home_url(); ?>">  
                             <input autocomplete="off" class="search-field" id="search-text" name="s" placeholder="<?php echo esc_attr_x( 'Search…', 'placeholder' ) ?>" type="text" value="<?php the_search_query(); ?>" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
@@ -85,8 +85,10 @@
                                 </svg>
 		        	    	</span> 
 		                </form>
-		            </div>       
+		            </div>  
+					<a class="add-listing-button" href="add-property"><i class="fa-solid fa-plus"></i> Add Property</a>     
 		    	</div>
+				
 	        </nav>
         </div>
     </header>
