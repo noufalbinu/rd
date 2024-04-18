@@ -152,6 +152,20 @@ add_action( 'edited_genres', 'save_taxonomy_custom_meta', 10, 2 );
 add_action( 'create_genres', 'save_taxonomy_custom_meta', 10, 2 );
 
 
+add_action('init','add_property_owner_role');
+function add_property_owner_role() {
+    add_role('property_owner_role', 'Property Owner',
+        array(
+            'read' => true,
+            'edit_posts' => false,
+            'delete_posts' => false,
+            'publish_posts' => false,
+            'upload_files' => false,
+            'publish_posts' => false,
+            'create_posts' => false, 
+        )
+    );
+}
 
 add_action( 'init', 'codex_resort_init' );
 function codex_resort_init() {
@@ -186,13 +200,63 @@ function codex_resort_init() {
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'resort' ),
 		'capability_type'    => 'post',
+		'map_meta_cap'        => true, // Set to `false`, if users are not allowed to edit/delete existing posts 
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+		
 	);
 	register_post_type( 'resort', $args );
 }
+add_action('admin_init','property_owner_role_caps',999);
+function property_owner_role_caps() {
+    // Add the roles you'd like to administer the custom post types
+    $roles = array('property_owner_role','author');
+    // Loop through each role and assign capabilities
+    foreach($roles as $the_role) { 
+        $role = get_role($the_role);
+    	$role->add_cap( 'read' );
+    	$role->add_cap( 'read_resort');
+    	$role->add_cap( 'read_private_resort' );
+    	$role->add_cap( 'edit_resort' );
+		$role->add_cap( 'edit_resort' );
+		$role->add_cap( 'edit_others_resort' );
+		$role->add_cap( 'edit_published_resort' );
+		$role->add_cap( 'publish_resort' );
+		$role->add_cap( 'delete_others_resort' );
+		$role->add_cap( 'delete_private_resort' );
+		$role->add_cap( 'delete_published_resort' );
+	}
+}
+function change_capabilities_of_CPT( $args, $post_type ){
+
+	// Do not filter any other post type
+	if ( 'resort' !== $post_type ) { // resort == Custom Post Type == 'job' or other
+   
+		// if other post_types return original arguments
+		return $args;
+   
+	}
+   
+   
+   // This is the important part of the capabilities 
+   /// which you can also do on creation ( and not by filtering like in this example )
+   
+   
+	// Change the capabilities of resort post_type
+	$args['capabilities'] = array(
+		'edit_post' => 'edit_resort',
+		'edit_posts' => 'edit_resort',
+		'edit_others_posts' => 'edit_other_resort',
+		'publish_posts' => 'publish_resort',
+		'read_post' => 'read_resort ',
+		'read_private_posts' => 'read_private_resort',
+		'delete_post' => 'delete_resort'
+	);
+	// Return the new arguments
+	return $args;
+   }
 register_taxonomy( 'features', array('resort'), 
     array(
      'hierarchical' => true, 

@@ -4,6 +4,15 @@
 <?php 
 $postTitle = $_POST['post_title'];
 $post = $_POST['post'];
+
+$pricerange = $_POST['hcf_author'];
+$location = $_POST['hcf_published_date'];
+$phone = $_POST['hcf_price'];
+$website = $_POST['download_button'];
+$pricerange = $_POST['download_button_pro'];
+$pricerange = $_POST['theme_doc'];
+
+
 $submit = $_POST['submit'];
 
 
@@ -20,13 +29,28 @@ if(isset($submit)){
       
         'post_title' => $postTitle,
         'post_content' => $post,
-        'post_status' => 'publish',
+        'post_status' => 'draft',
         'post_date' => date('Y-m-d H:i:s'),
         'post_author' => $user_ID,
         'post_type' => 'resort',
-        'post_category' => array(0)
+        'post_category' => array(0, 1 , 2 , 3)
     );
     $post_id = wp_insert_post($new_post);
+
+    $fields = [
+      'hcf_author',
+      'hcf_published_date',
+      'hcf_price',
+      'download_button',
+      'download_button_pro',
+      'theme_doc'
+  ];
+  foreach ( $fields as $field ) {
+      if ( array_key_exists( $field, $_POST ) ) {
+          update_post_meta( $post_id, $field, sanitize_text_field( $_POST[$field] ) );
+      }
+   }
+
 
     # Set Thumbnail
 
@@ -36,6 +60,7 @@ if(isset($submit)){
       'post_status' => 'pending',
       'post_parent' => $post_id
   );
+
 
   $attachments = get_posts($args);
 
@@ -82,14 +107,34 @@ set_post_thumbnail($post_id, $attachment_id);
       <h1>Add your Property</h1>
       <form method="post" action="" enctype="multipart/form-data">
       <div class="form-base">
-          <label for="post_title">Post Title</label>
+          <label for="post_title">Property Title</label>
           <input name="post_title" type="text">
           <label for="post">Post</label>
           <textarea name="post" type="text" ></textarea>
           <input id="upload_image_button" name="upload_image" type="file" value="<?php if (isset($options['upload-image'])) echo esc_attr($options['upload-image']); ?>">
           
-          <input name="submit" type="submit" value="submit" />
+
+          <br><b>Property Details</b><br>
+
+          <label for="post">Price Range</label>
+          <input name="hcf_author" type="text"><br>
+
+          <label for="post">Phone</label>
+          <input name="hcf_published_date" type="text"><br>
+
+          <label for="post">Website</label>
+          <input name="hcf_price" type="text"><br>
+
+          <label for="post">Deal Price</label>
+          <input name="download_button" type="text"><br>
+
+          <label for="post">Location</label>
+          <input name="download_button_pro" type="text"><br>
+
+          <label for="post">Post</label>
+          <input name="theme_doc" type="text"><br>
       </div>
+      <input name="submit" type="submit" value="submit" />
     </form>
 </div>
 
