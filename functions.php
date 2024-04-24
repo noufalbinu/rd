@@ -233,10 +233,8 @@ function change_capabilities_of_CPT( $args, $post_type ){
 
 	// Do not filter any other post type
 	if ( 'resort' !== $post_type ) { // resort == Custom Post Type == 'job' or other
-   
 		// if other post_types return original arguments
 		return $args;
-   
 	}
    
    

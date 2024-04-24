@@ -50,8 +50,8 @@ a.nav-link {
 }
  input.search-input {
      padding: 10px 29px;
-     border-radius: 10px 0 0 10px;
-     border: 1px solid #121212;
+     border-radius: unset;
+     border: 1px solid #6dcc93;
      width: 70%;
      height: 59px;
      color: #fff;
@@ -62,9 +62,8 @@ a.nav-link {
 }
  .search-button {
      background: #6dcc93;
-     border: 1px solid #000000;
+     border: 1px solid #6dcc93;
      border-left: 0;
-     border-radius: 0 10px 10px 0;
      color: #fff;
      width: 105px;
      height: 59px;
@@ -160,7 +159,7 @@ a.nav-link {
      box-shadow: rgb(62, 62, 62) 4px 4px 6px -2px;
 }
  .get-it-now {
-    background: rgb(247 253 252);
+    background: #daffe4;
 }
 h2.popular-locations {
     text-align: center;
@@ -179,10 +178,7 @@ h2.popular-locations {
  .big-cat img {
      width: 100%;
 }
-.big-cat img, .medium-cat img, .small-cat img {
-    width: 100%;
- border-radius: 10px;
-}
+.big-cat img, .medium-cat img, .small-cat img {width: auto;height: 100%;}
 .big-cat, .medium-cat, .small-cat {
     padding-right: 10px
 }
@@ -190,6 +186,9 @@ h2.popular-locations {
     display: grid;
     width: 100%;
     grid-template-columns: auto auto auto;
+}
+.big-cat {
+    height: 100%;
 }
 .big-cat, .medium-cat {
     position:relative;
@@ -282,7 +281,6 @@ h2.popular-locations {
 }
 .list {
     background: #eef6f1;
-    border-radius: 14px;
     margin-top: 30px;
 }
  .excerpt-image {

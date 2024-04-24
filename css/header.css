@@ -29,23 +29,22 @@ a:hover {
 .add-listing-button {
     background: #02c4ac;
     padding: 10px 20px;
-    border-radius: 5px;
 }
 .header-outer-nav {
-    background: #6dcc93;
+    background: #daffe4;
     padding: 20px;
-    color: #fff;
-    border-radius: 10px;
+    color: #000;
+    border-radius: 10px 10px 0 0;
 }
 p.notification-nav {
     margin: 0;
     text-align: center;
-    color: #fff;
+    color: #040404;
     font-weight: 200;
     font-size: 17px;
 }
 p.notification-nav a {
-    color: #1cff83;
+    color: #204c34;
     text-decoration: underline;
 }
 header {
